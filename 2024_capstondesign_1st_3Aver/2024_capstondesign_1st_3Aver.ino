@@ -115,7 +115,7 @@ void loop() {
     digitalWrite(SSR_PIN1, HIGH); // SSR1 켜기   
 
 //           육묘장 내 평균습도  
-  } else if (avgHumidity >= 70) { // 온습도센서의 평균값을 통해 릴레이 켜기 
+  } else if (avgHumidity >= 70) { // 온습도센서의 평균값을 통해 릴레이 끄기
     digitalWrite(SSR_PIN1, LOW); // SSR1 끄기
   }
   
@@ -125,7 +125,7 @@ void loop() {
   if (avgTemperature >= 26.5) { // 온습도센서의 평균값을 통해 릴레이 켜기 
     digitalWrite(SSR_PIN2, HIGH); // SSR2 켜기
 //       육묘장 내 평균온습도  
-  } else if (avgTemperature <= 24.5 || avgHumidity >= 80) { // 온습도센서의 평균값을 통해 릴레이 켜기 
+  } else if (avgTemperature <= 24.5 || avgHumidity >= 70) { // 온습도센서의 평균값을 통해 릴레이 끄기 
     digitalWrite(SSR_PIN2, LOW); // SSR2 끄기
   }
   
